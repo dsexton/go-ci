@@ -73,6 +73,8 @@ RUN groupadd --gid 3434 circleci \
   && echo 'Defaults    env_keep += "DEBIAN_FRONTEND"' >> /etc/sudoers.d/env_keep
 
 # BEGIN IMAGE CUSTOMIZATIONS
+RUN go get -u github.com/jstemmer/go-junit-report
+RUN chown -R circleci:circleci $GOPATH
 # END IMAGE CUSTOMIZATIONS
 
 USER circleci
