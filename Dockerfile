@@ -12,4 +12,4 @@ RUN /scripts/install-docker
 RUN /scripts/install-docker-compose
 
 RUN go get -u github.com/golang/dep/cmd/dep
-RUN go get -u gopkg.in/alecthomas/gometalinter.v2
+RUN go get -u github.com/alecthomas/gometalinter
